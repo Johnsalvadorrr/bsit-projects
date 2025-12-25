@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT PATHWAYS - Programs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --primary-font: 'Montserrat', sans-serif;
+            --section-padding: 100px 0;
+            --border: 2px solid var(--white);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: var(--primary-font);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            padding: 20px 0;
+            border-bottom: var(--border);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--black);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+            background: var(--black);
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        /* Program Section */
+        .programs {
+            padding: var(--section-padding);
+            flex: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .program-card {
+            background: var(--black);
+            padding: 30px;
+            border-radius: 10px;
+            border: var(--border);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .program-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .career-list {
+            margin-top: auto;
+        }
+
+        .career-list h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .career-list ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .career-list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .career-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .learn-more {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section ul li a:hover {
+            color: #ccc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="home.html" class="logo">IT PATHWAYS</a>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="program.html">IT RELATED COURSES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>EXPLORE OUR PROGRAMS</h2>
+                <p>Discover the diverse range of Information Technology programs designed to prepare you for the digital future</p>
+            </div>
+            <div class="programs-grid">
+                <!-- Computer Science -->
+                <a href="computer-science.html" class="program-card">
+                    <h3>BACHELOR OF SCIENCE IN COMPUTER SCIENCE</h3>
+                    <p>Comprehensive program focusing on software development, algorithms, and computer systems to develop innovative solutions.</p>
+                    <div class="career-list">
+                        <h4>CAREER PATHS:</h4>
+                        <ul>
+                            <li>Software Developer</li>
+                            <li>Systems Architect</li>
+                            <li>AI Engineer</li>
+                            <li>Game Developer</li>
+                        </ul>
+                    </div>
+                    <div class="learn-more">Click to learn more →</div>
+                </a>
+                
+                <!-- Information Technology -->
+                <a href="information-technology.html" class="program-card">
+                    <h3>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</h3>
+                    <p>Focuses on practical applications of technology in business environments and network systems management.</p>
+                    <div class="career-list">
+                        <h4>CAREER PATHS:</h4>
+                        <ul>
+                            <li>Network Administrator</li>
+                            <li>IT Support Specialist</li>
+                            <li>Systems Analyst</li>
+                            <li>Cloud Architect</li>
+                        </ul>
+                    </div>
+                    <div class="learn-more">Click to learn more →</div>
+                </a>
+                
+                <!-- Information Systems -->
+                <a href="information-systems.html" class="program-card">
+                    <h3>BACHELOR OF SCIENCE IN INFORMATION SYSTEMS</h3>
+                    <p>Bridging business needs with technology solutions through system analysis and data management.</p>
+                    <div class="career-list">
+                        <h4>CAREER PATHS:</h4>
+                        <ul>
+                            <li>Business Analyst</li>
+                            <li>Database Administrator</li>
+                            <li>IT Project Manager</li>
+                            <li>Systems Consultant</li>
+                        </ul>
+                    </div>
+                    <div class="learn-more">Click to learn more →</div>
+                </a>
+                
+                <!-- Cybersecurity -->
+                <a href="cybersecurity.html" class="program-card">
+                    <h3>BACHELOR OF SCIENCE IN CYBERSECURITY</h3>
+                    <p>Specialized program focusing on protecting digital assets, network security, and ethical hacking techniques.</p>
+                    <div class="career-list">
+                        <h4>CAREER PATHS:</h4>
+                        <ul>
+                            <li>Security Analyst</li>
+                            <li>Ethical Hacker</li>
+                            <li>Security Architect</li>
+                            <li>Forensics Expert</li>
+                        </ul>
+                    </div>
+                    <div class="learn-more">Click to learn more →</div>
+                </a>
+                
+                <!-- Software Engineering -->
+                <a href="software-engineering.html" class="program-card">
+                    <h3>BACHELOR OF SCIENCE IN SOFTWARE ENGINEERING</h3>
+                    <p>Comprehensive software development lifecycle, agile methodologies, and large-scale system design.</p>
+                    <div class="career-list">
+                        <h4>CAREER PATHS:</h4>
+                        <ul>
+                            <li>Software Engineer</li>
+                            <li>DevOps Engineer</li>
+                            <li>QA Engineer</li>
+                            <li>Technical Lead</li>
+                        </ul>
+                    </div>
+                    <div class="learn-more">Click to learn more →</div>
+                </a>
+                
+                <!-- Data Science -->
+                <a href="data-science.html" class="program-card">
+                    <h3>BACHELOR OF SCIENCE IN DATA SCIENCE</h3>
+                    <p>Focuses on data analysis, machine learning, statistical modeling, and big data technologies.</p>
+                    <div class="career-list">
+                        <h4>CAREER PATHS:</h4>
+                        <ul>
+                            <li>Data Analyst</li>
+                            <li>Machine Learning Engineer</li>
+                            <li>Data Engineer</li>
+                            <li>Business Intelligence</li>
+                        </ul>
+                    </div>
+                    <div class="learn-more">Click to learn more →</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>IT PATHWAYS</h4>
+                    <p>Your gateway to IT education and career opportunities</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="program.html">Programs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACT INFO</h4>
+                    <p>jtugade_01@mtc.edu.ph</p>
+                    <p>esales_02@mtc.edu.ph</p>
+                    <p>chernandez_03@mtc.edu.ph</p>
+                    <p>apaulo_04@mtc.edu.ph</p>
+                    <p>Phone: 123-456-789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IT Pathways. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

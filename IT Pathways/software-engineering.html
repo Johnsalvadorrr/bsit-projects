@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT PATHWAYS - Bachelor of Science in Software Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --primary-font: 'Montserrat', sans-serif;
+            --section-padding: 100px 0;
+            --border: 2px solid var(--white);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: var(--primary-font);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            padding: 20px 0;
+            border-bottom: var(--border);
+            position: relative;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--black);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+            background: var(--black);
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .back-button {
+            background: var(--black);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: var(--border);
+        }
+
+        .back-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        /* Course Header */
+        .course-header {
+            padding: 80px 0 40px;
+            text-align: center;
+            border-bottom: var(--border);
+        }
+
+        .course-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .course-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ccc;
+        }
+
+        /* Course Content */
+        .course-content {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .content-section {
+            background: var(--black);
+            padding: 40px;
+            border-radius: 10px;
+            border: var(--border);
+            height: 100%;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--white);
+            text-align: center;
+            border-bottom: 2px solid var(--white);
+            padding-bottom: 10px;
+        }
+
+        .course-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .feature-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .career-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .career-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px 12px 35px;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .career-list li:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .career-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 15px;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            padding: 60px 0 20px;
+            border-top: var(--border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section ul li a:hover {
+            color: #ccc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+    
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="home.html" class="logo">IT PATHWAYS</a>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="program.html">IT RELATED COURSES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li> 
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Course Header -->
+    <section class="course-header">
+        <div class="container">
+            <h1>Bachelor of Science in Software Engineering</h1>
+            <p>Building intelligent and reliable computing systems for the modern world</p>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="course-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Program Overview -->
+                <div class="content-section">
+                    <h2>Program Overview</h2>
+                    <p class="course-description">
+                        This program involves putting intelligence and reliability into the computing devices 
+                        and systems our modern world relies on. Software engineers are involved in every phase 
+                        of software development from coding the software to designing the processes required to 
+                        design, test and develop it.
+                    </p>
+                    
+                    <p class="course-description">
+                        With the expansion of mobile computing, software engineers are in high demand to build 
+                        software programs to analyze data and make it meaningful to businesses. As a software 
+                        engineer, your work could also involve making the devices used in everything from computer 
+                        games to banking systems more reliable.
+                    </p>
+                    
+                    <h3>Key Focus Areas</h3>
+                    <ul class="feature-list">
+                        <li>Software Development Lifecycle</li>
+                        <li>System Design and Architecture</li>
+                        <li>Mobile and Web Application Development</li>
+                        <li>Quality Assurance and Testing</li>
+                        <li>Agile Development Methodologies</li>
+                        <li>Software Maintenance and Evolution</li>
+                    </ul>
+                </div>
+                
+                <!-- Career Opportunities -->
+                <div class="content-section">
+                    <h2>Career Opportunities</h2>
+                    <p class="course-description">
+                        Graduates of our Software Engineering program are prepared for diverse roles in 
+                        technology companies, financial institutions, healthcare organizations, and 
+                        various industries requiring custom software solutions.
+                    </p>
+                    
+                    <ul class="career-list">
+                        <li>Application Analyst</li>
+                        <li>Business Analyst</li>
+                        <li>Database Administrator</li>
+                        <li>Forensic Computer Analyst</li>
+                        <li>Machine Learning Engineer</li>
+                        <li>Penetration Tester</li>
+                        <li>Software Tester</li>
+                        <li>Sound Designer</li>
+                        <li>Systems Analyst</li>
+                        <li>IT Technical Support Officer</li>
+                        <li>Multimedia Programmer</li>
+                        <li>Web Developer</li>
+                        <li>Web Designer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-container">
+                <a href="program.html" class="back-button">
+                    BACK
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>IT PATHWAYS</h4>
+                    <p>Your gateway to IT education and career opportunities</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="program.html">Programs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACT INFO</h4>
+                    <p>jtugade_01@mtc.edu.ph</p>
+                    <p>esales_02@mtc.edu.ph</p>
+                    <p>chernandez_03@mtc.edu.ph</p>
+                    <p>apaulo_04@mtc.edu.ph</p>
+                    <p>Phone: 123-456-789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IT Pathways. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

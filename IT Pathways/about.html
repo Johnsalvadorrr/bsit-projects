@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT PATHWAYS - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --primary-font: 'Montserrat', sans-serif;
+            --section-padding: 100px 0;
+            --border: 2px solid var(--white);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: var(--primary-font);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            padding: 20px 0;
+            border-bottom: var(--border);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--black);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+            background: var(--black);
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        /* About Section */
+        .about {
+            padding: var(--section-padding);
+            flex: 1;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .vision-box {
+            background: var(--black);
+            padding: 40px;
+            border-radius: 10px;
+            border: var(--border);
+            margin-top: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section ul li a:hover {
+            color: #ccc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="home.html" class="logo">IT PATHWAYS</a>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="program.html">IT RELATED COURSES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>ABOUT US</h2>
+                <h3>WHAT WE DO</h3>
+                <p>A modern and accessible website about the IT Programs, for the needs of students. Serving as a central hub for information.
+
+                    General information are gathered from online sources and presented in an easy-to-understand format to help students make informed decisions about their education and career paths in the IT field.
+                </p>
+                
+                <div class="vision-box">
+                    <h3>VISION</h3>
+                    <p>To empower students with comprehensive information about IT programs and guide them toward successful careers in technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>IT PATHWAYS</h4>
+                    <p>Your gateway to IT education and career opportunities</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="program.html">Programs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACT INFO</h4>
+                    <p>jtugade_01@mtc.edu.ph</p>
+                    <p>esales_02@mtc.edu.ph</p>
+                    <p>chernandez_03@mtc.edu.ph</p>
+                    <p>apaulo_04@mtc.edu.ph</p>
+                    <p>Phone: 123-456-789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IT Pathways. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
